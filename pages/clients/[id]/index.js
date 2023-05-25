@@ -5,9 +5,14 @@ function ClientsIdPage() {
   console.log(router.pathname);
   console.log(router.query);
 
+  function loadProjectHandler() {
+    return router.push("/clients/max/projecta")
+  }
+
   return (
     <div>
-      <h1>This is the ClientsIdPage</h1>
+      <h1>The Project of A Given Client</h1>
+      <button onClick={loadProjectHandler}>Load Project A</button>
     </div>
   );
 }
