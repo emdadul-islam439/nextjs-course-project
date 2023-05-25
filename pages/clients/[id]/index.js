@@ -6,7 +6,10 @@ function ClientsIdPage() {
   console.log(router.query);
 
   function loadProjectHandler() {
-    return router.push("/clients/max/projecta")
+    return router.push({
+      pathname: "/clients/[id]/[clientprojectid]",
+      query: { id: "max", clientprojectid: "projecta" },
+    });
   }
 
   return (
