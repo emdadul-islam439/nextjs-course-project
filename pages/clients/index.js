@@ -16,7 +16,7 @@ function ClientsPage() {
       <h1>This is the ClientsPage</h1>
       {clients.map((client) => (
         <li key={client.id}>
-          <Link href={`/clients/${client.id}`}>{client.name}</Link>
+          <Link href={{pathname: "/clients/[id]", query: {id: client.id}}}>{client.name}</Link>
         </li>
       ))}
     </div>
